@@ -1,4 +1,4 @@
 #!/bin/bash
 
 LINTER_PATH=$(go env GOPATH)
-$LINTER_PATH/bin/golangci-lint run ./*.go
+$LINTER_PATH/bin/golangci-lint run $(find . -type d | grep -vE '(\.git|linter_hook)' | tr '\n' ' ')
