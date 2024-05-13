@@ -64,7 +64,7 @@ func AddToBasket(c echo.Context) error {
 		return c.JSON(http.StatusOK, existingItem)
 	}
 
-	return c.JSONBlob(http.StatusNotFound, []byte(`{"error":"Error while adding item to basket"}`))
+	// return c.JSONBlob(http.StatusNotFound, []byte(`{"error":"Error while adding item to basket"}`))
 
 }
 

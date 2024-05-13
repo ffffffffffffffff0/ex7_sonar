@@ -21,18 +21,6 @@ func CheckIdMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 	}
 }
 
-func checkIdMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
-	return func(c echo.Context) error {
-		id := c.Param("id")
-		product := new(models.Product)
-		result := database.DB.First(&product, id); if result.Error != nil {
-			return c.JSONBlob(http.StatusNotFound, []byte(`{"error":"Product not found"}`))
-		}
-		c.Set("product", product)
-		return next(c)
-	}
-}
-
 func CheckPrice(price_str string) float32 {
 	if floatV, err := strconv.ParseFloat(price_str, 64); err == nil {
 		return float32(floatV)
