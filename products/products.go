@@ -21,8 +21,8 @@ func CheckIdMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 	}
 }
 
-func CheckPrice(price_str string) float32 {
-	if floatV, err := strconv.ParseFloat(price_str, 64); err == nil {
+func CheckPrice(priceStr string) float32 {
+	if floatV, err := strconv.ParseFloat(priceStr, 64); err == nil {
 		return float32(floatV)
 	}
 	return 0.0
