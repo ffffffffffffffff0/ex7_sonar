@@ -1,1 +1,1 @@
-ex6_sonar
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ffffffffffffffff0_ex7_sonar&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ffffffffffffffff0_ex7_sonar)
